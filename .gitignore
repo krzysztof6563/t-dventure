@@ -30,3 +30,14 @@
 *.exe
 *.out
 *.app
+
+
+.vscode
+
+build/CMakeCache.txt
+build/cmake_install.cmake
+build/build.ninja
+build/.ninja*
+build/.cmake
+build/CMakeFiles
+build/t-dventure
