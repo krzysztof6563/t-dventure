@@ -30,7 +30,7 @@ SDL2Renderer::SDL2Renderer() {
 }
 
 int SDL2Renderer::printText(std::string text, int x, int y) {
-
+    
     return 0;
 }
 
@@ -59,25 +59,6 @@ int SDL2Renderer::paintBackgroundColor(int r, int g, int b) {
     return 0;
 }
 
-bool SDL2Renderer::loadTexture(std::string name, std::string path) {
-    SDL_Texture* newTexture = NULL;
-    SDL_Surface* tempSurface = IMG_Load(path.c_str());
-    if (tempSurface == NULL) {
-        throw std::runtime_error(IMG_GetError());
-    } else {
-        //Create texture from surface pixels
-        newTexture = SDL_CreateTextureFromSurface( this->gRenderer, tempSurface );
-        if (newTexture == NULL) {
-            throw std::runtime_error(SDL_GetError());
-        }
-        this->textures[name] = newTexture;
-        //Get rid of old loaded surface
-        SDL_FreeSurface( tempSurface );
-    }
-
-    return true;
-}
-
 void SDL2Renderer::renderTitleScreen() {
     SDL_Rect srcQuad = {0, 0, 64, 64};
     SDL_Rect destQuad = {0, 0, 64, 64};
@@ -85,23 +66,24 @@ void SDL2Renderer::renderTitleScreen() {
         for (size_t j = 0; j < this->SCREEN_HEIGHT; j += 64) {
             destQuad.x = i;
             destQuad.y = j;
-            SDL_RenderCopy(this->gRenderer, this->textures["main"], &srcQuad, &destQuad);
+            SDL_RenderCopy(this->gRenderer, this->textureManager->getTexture("main"), &srcQuad, &destQuad);
         }
     }
 
     SDL_Rect logoDest = {490, 50, 300, 150};
-    SDL_RenderCopy(this->gRenderer, this->textures["logo"], nullptr, &logoDest);
+    SDL_RenderCopy(this->gRenderer, this->textureManager->getTexture("logo"), nullptr, &logoDest);
 }
 
 void SDL2Renderer::clearRenderer() {
     SDL_RenderClear(this->gRenderer);
 }
 
+SDL_Renderer* SDL2Renderer::getGPURenderer() {
+    return this->gRenderer;
+}
+
+
 SDL2Renderer::~SDL2Renderer() {
-    for (const auto& t : this->textures) {
-        SDL_DestroyTexture(t.second);
-    }
-    
     SDL_DestroyRenderer(this->gRenderer);
     SDL_DestroyWindow(this->window);
     IMG_Quit();

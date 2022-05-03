@@ -1,12 +1,27 @@
 [
 {
   "directory": "/mnt/4E904B79169F9A8E/Projects/t-dventure/build",
-  "command": "/usr/bin/g++ -I/usr/include/SDL2 -std=c++17  -g -o CMakeFiles/t-dventure.dir/main.cpp.o -c /mnt/4E904B79169F9A8E/Projects/t-dventure/main.cpp",
-  "file": "/mnt/4E904B79169F9A8E/Projects/t-dventure/main.cpp"
+  "command": "/usr/bin/g++ -I/usr/include/SDL2 -std=c++17  -g -o CMakeFiles/t-dventure.dir/Game.cpp.o -c /mnt/4E904B79169F9A8E/Projects/t-dventure/Game.cpp",
+  "file": "/mnt/4E904B79169F9A8E/Projects/t-dventure/Game.cpp"
 },
 {
   "directory": "/mnt/4E904B79169F9A8E/Projects/t-dventure/build",
-  "command": "/usr/bin/g++ -I/usr/include/SDL2 -std=c++17  -g -o CMakeFiles/t-dventure.dir/renderer/SDL2Renderer.cpp.o -c /mnt/4E904B79169F9A8E/Projects/t-dventure/renderer/SDL2Renderer.cpp",
-  "file": "/mnt/4E904B79169F9A8E/Projects/t-dventure/renderer/SDL2Renderer.cpp"
+  "command": "/usr/bin/g++ -I/usr/include/SDL2 -std=c++17  -g -o CMakeFiles/t-dventure.dir/graphics/SDL2Renderer.cpp.o -c /mnt/4E904B79169F9A8E/Projects/t-dventure/graphics/SDL2Renderer.cpp",
+  "file": "/mnt/4E904B79169F9A8E/Projects/t-dventure/graphics/SDL2Renderer.cpp"
+},
+{
+  "directory": "/mnt/4E904B79169F9A8E/Projects/t-dventure/build",
+  "command": "/usr/bin/g++ -I/usr/include/SDL2 -std=c++17  -g -o CMakeFiles/t-dventure.dir/graphics/SDL2TextureManager.cpp.o -c /mnt/4E904B79169F9A8E/Projects/t-dventure/graphics/SDL2TextureManager.cpp",
+  "file": "/mnt/4E904B79169F9A8E/Projects/t-dventure/graphics/SDL2TextureManager.cpp"
+},
+{
+  "directory": "/mnt/4E904B79169F9A8E/Projects/t-dventure/build",
+  "command": "/usr/bin/g++ -I/usr/include/SDL2 -std=c++17  -g -o CMakeFiles/t-dventure.dir/input/InputHandler.cpp.o -c /mnt/4E904B79169F9A8E/Projects/t-dventure/input/InputHandler.cpp",
+  "file": "/mnt/4E904B79169F9A8E/Projects/t-dventure/input/InputHandler.cpp"
+},
+{
+  "directory": "/mnt/4E904B79169F9A8E/Projects/t-dventure/build",
+  "command": "/usr/bin/g++ -I/usr/include/SDL2 -std=c++17  -g -o CMakeFiles/t-dventure.dir/main.cpp.o -c /mnt/4E904B79169F9A8E/Projects/t-dventure/main.cpp",
+  "file": "/mnt/4E904B79169F9A8E/Projects/t-dventure/main.cpp"
 }
 ]

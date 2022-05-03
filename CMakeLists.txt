@@ -4,8 +4,10 @@ project(t-dventure)
 file(GLOB t-dventure_SRC
     "*.h"
     "*.cpp"
-    "renderer/*.h"
-    "renderer/*.cpp"
+    "graphics/*.h"
+    "graphics/*.cpp"
+    "input/*.h"
+    "input/*.cpp"
 )
 
 set (CMAKE_CXX_FLAGS "-std=c++17 ")

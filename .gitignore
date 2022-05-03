@@ -41,3 +41,4 @@ build/.ninja*
 build/.cmake
 build/CMakeFiles
 build/t-dventure
+build/.fuse_hidden*
