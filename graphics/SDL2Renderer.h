@@ -23,6 +23,6 @@ class SDL2Renderer {
         const int SCREEN_WIDTH = 1280;
 
         SDL_Window* window = NULL;
-        SDL_Surface* screenSurface = NULL;
+        // SDL_Surface* screenSurface = NULL;
         SDL_Renderer* gRenderer = NULL;
 };

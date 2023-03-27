@@ -16,9 +16,12 @@ SDL2Renderer::SDL2Renderer() {
         if (window == NULL) {
             throw std::runtime_error(SDL_GetError());
         } else {
-            this->screenSurface = SDL_GetWindowSurface(this->window);
+            // this->screenSurface = SDL_GetWindowSurface(this->window);
             this->gRenderer = SDL_CreateRenderer(this->window, -1, SDL_RENDERER_ACCELERATED);
-            SDL_SetRenderDrawColor( this->gRenderer, 0xFF, 0xFF, 0xFF, 0xFF );
+            if (this->gRenderer == nullptr) {
+                throw std::runtime_error(SDL_GetError());
+            }
+            SDL_SetRenderDrawColor( this->gRenderer, 0x0, 0x0, 0x0, 0xFF );
 
             int imgFlags = IMG_INIT_PNG;
             if( !( IMG_Init( imgFlags ) & imgFlags ) )

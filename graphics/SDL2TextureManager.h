@@ -9,11 +9,12 @@
 
 class SDL2TextureManager {
     public:
+        ~SDL2TextureManager();
         bool loadTexture(std::string name, std::string path);
         SDL_Texture* getTexture(std::string name);
         bool freeTexture(std::string name);
         SDL_Renderer* gRenderer = NULL;
 
     private:
-        std::map<std::string, SDL_Texture*> textures;
+        std::map<std::string, SDL2Texture*> textures;
 };
