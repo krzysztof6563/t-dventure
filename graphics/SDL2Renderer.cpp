@@ -62,20 +62,6 @@ int SDL2Renderer::paintBackgroundColor(int r, int g, int b) {
     return 0;
 }
 
-void SDL2Renderer::renderTitleScreen() {
-    SDL_Rect srcQuad = {0, 0, 64, 64};
-    SDL_Rect destQuad = {0, 0, 64, 64};
-    for (size_t i = 0; i < this->SCREEN_WIDTH; i += 64) {
-        for (size_t j = 0; j < this->SCREEN_HEIGHT; j += 64) {
-            destQuad.x = i;
-            destQuad.y = j;
-            SDL_RenderCopy(this->gRenderer, this->textureManager->getTexture("main"), &srcQuad, &destQuad);
-        }
-    }
-
-    SDL_Rect logoDest = {490, 50, 300, 150};
-    SDL_RenderCopy(this->gRenderer, this->textureManager->getTexture("logo"), nullptr, &logoDest);
-}
 
 void SDL2Renderer::clearRenderer() {
     SDL_RenderClear(this->gRenderer);

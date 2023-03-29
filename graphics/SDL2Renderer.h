@@ -13,16 +13,15 @@ class SDL2Renderer {
         int printText(std::string text, int x, int y);
         int updateWindow();
         int paintBackgroundColor(int r, int g, int b);
-        void renderTitleScreen();
         void clearRenderer();
         SDL_Renderer* getGPURenderer();
         std::shared_ptr<SDL2TextureManager> textureManager;
-
-    private:
         const int SCREEN_HEIGHT = 720;
         const int SCREEN_WIDTH = 1280;
+        SDL_Renderer* gRenderer = NULL;
+
+    private:
 
         SDL_Window* window = NULL;
         // SDL_Surface* screenSurface = NULL;
-        SDL_Renderer* gRenderer = NULL;
 };

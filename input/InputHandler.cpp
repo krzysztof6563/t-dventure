@@ -3,16 +3,17 @@
 int InputHandler::getCurrentKey() {
     while (SDL_PollEvent(&e) != 0) {
         switch (e.type) {
-            // case SDL_KEYDOWN:
-            //     switch (e.key.keysym.sym) {
-            //         case SDLK_y: r += 10; break;
-            //         case SDLK_h: r -= 10; break;
-            //         case SDLK_u: g += 10; break;
-            //         case SDLK_j: g -= 10; break;
-            //         case SDLK_i: b += 10; break;
-            //         case SDLK_k: b -= 10; break;
-            //     }
-            //     break;
+            case SDL_KEYDOWN:
+                return e.key.keysym.sym;
+                // switch (e.key.keysym.sym) {
+                //     case SDLK_y: r += 10; break;
+                //     case SDLK_h: r -= 10; break;
+                //     case SDLK_u: g += 10; break;
+                //     case SDLK_j: g -= 10; break;
+                //     case SDLK_i: b += 10; break;
+                //     case SDLK_k: b -= 10; break;
+                // }
+                break;
         }
     }
 
